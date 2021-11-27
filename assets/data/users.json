@@ -2,25 +2,21 @@
     {
         "name": "name1",
         "surname": "surname1",
-        "age": 20,
-        "isMale": true
+        "imgUser": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp0xKoXUryp0JZ1Sxp-99eQiQcFrmA1M1qbQ&usqp=CAU"
     },
     {
         "name": "name2",
         "surname": "surname2",
-        "age": 28,
-        "isMale": true
+        "imgUser": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp0xKoXUryp0JZ1Sxp-99eQiQcFrmA1M1qbQ&usqp=CAU"
     },
     {
         "name": "name3",
         "surname": "surname3",
-        "age": 20,
-        "isMale": false
+        "imgUser": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp0xKoXUryp0JZ1Sxp-99eQiQcFrmA1M1qbQ&usqp=CAU"
     },
     {
         "name": "name4",
         "surname": "surname4",
-        "age": 25,
-        "isMale": false
+        "imgUser": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp0xKoXUryp0JZ1Sxp-99eQiQcFrmA1M1qbQ&usqp=CAU"
     }
 ]

@@ -92,7 +92,7 @@ function loadUsersResolve(response){
 function loadUsersReject(response){
     console.log(response);
 };*/
-/*
+
 fetch('../../assets/data/users.json')
 .then(loadUsersResolve)
 .then(logData)
@@ -103,18 +103,38 @@ function loadUsersResolve(response){
     return response.json();
 };
 
-function logData(data){
-    console.log(data);
+function logData(users){
+    const userlist = document.getElementById('userList');
+
+    users.forEach(user => {
+        userlist.append(createUserCard(user));
+    });
 };
 
 function loadUsersReject(response){
     console.log(response);
-};*/
+};
+
+
+function createUserCard(user){
+    const userLi = document.createElement('li');
+    //userLi.classList.add('userLiStyle');
+    const userImgContainer = document.createElement('div');
+    const userImg = document.createElement('img');
+    const userName = document.createElement('h2')
+    userImg.setAttribute('src', user.imgUser);
+    userImg.setAttribute('alt', 'user_photo');
+    userImgContainer.append(userImg);
+    userName.textContent = user.name + " " + user.surname;
+    userLi.append(userImgContainer, userName);
+    return userLi;
+}
+
 
 //promise
 
 //1
-
+/*
 const promise1 = new Promise(fun1);
 
 function fun1 (resolve, reject){
@@ -135,4 +155,4 @@ function funFor5(resolve, reject){
     console.log('number=', number);
     if(number <= 5) resolve(number);
     else reject(new Error('Reject. Number is ', number));
-};
+};*/
