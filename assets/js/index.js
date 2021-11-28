@@ -93,6 +93,7 @@ function loadUsersReject(response){
     console.log(response);
 };*/
 
+/*
 fetch('../../assets/data/users.json')
 .then(loadUsersResolve)
 .then(logData)
@@ -129,7 +130,7 @@ function createUserCard(user){
     userLi.append(userImgContainer, userName);
     return userLi;
 }
-
+*/
 
 //promise
 
@@ -156,3 +157,73 @@ function funFor5(resolve, reject){
     if(number <= 5) resolve(number);
     else reject(new Error('Reject. Number is ', number));
 };*/
+
+function funDelay (ms){
+    return new Promise((resolve) => {
+        setTimeout(() => {resolve('ok')}, ms);
+    });
+}
+
+//funDelay(1000).then(() => alert("Все получилось!"));
+/*
+function funDelay2 (ms){
+    return new Promise((resolve, reject) => {
+        if(!isNaN(ms)){
+            setTimeout(() => {resolve('ok')}, ms);
+        } else{
+            setTimeout(() => {reject(error)}, ms);
+        }
+    });
+}
+
+funDelay2(2000).then(() => alert("Все получилось!")).catch(() => alert("Ошибка!"));*/
+/*
+function funDelay2 (ms){
+    if(!isNaN(ms)){
+        return new Promise((resolve, reject) => {
+            setTimeout(()=>resolve('ok'), ms)
+        });
+    } else {
+        throw new Promise((resolve, reject) =>{
+            setTimeout(() => {
+                reject(TypeError("Parameter is not a number!"));
+            }, ms)
+        });
+    }
+}
+
+funDelay2(2000)
+.then((result) => console.log(result))
+.catch((error) => console.log(error));
+*/
+/*
+//1
+for(let i=0; i<=20; i++){
+    setTimeout(() => {
+        console.log(i);
+    }, 100);
+}
+
+//2
+let start = 1, end = 20;
+const timerId = setInterval(() => {
+    start <= end ? console.loge(start++) : clearInterval(timerId);
+}, 100);
+
+//3
+let i = 1;
+setTimeout(function funcTime() {
+    console.log(i++);
+    if(i<21){
+        setTimeout(funcTime, 100);
+    }
+}, 100);*/
+
+const promiseNumber = Promise.resolve(100);
+const promiseBoolean = Promise.resolve(true);
+const promiseString = Promise.resolve('some string');
+const promiseNull = Promise.resolve(null);
+const promiseObject = Promise.resolve({name: 'Tom', surmane: 'Fox'});
+
+promiseNumber.then((result) => console.log(result));
+promiseObject.then((result) => console.log(result));
